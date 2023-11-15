@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  color: var(--title-color);
+  background-color: var(--background-color);
+  justify-content: space-around;
+  padding: 1% 0%;
+}
+
+.footerList > li {
+  padding: 3% 0%;
+}
+
+.footerTitle {
+  font-family: var(--title-font);
+  text-decoration: underline;
+}
