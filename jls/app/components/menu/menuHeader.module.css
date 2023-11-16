@@ -6,6 +6,7 @@
   background-color: var(--intermediate-color);
   font-family: var(--primary-font);
   animation: slideIn 0.3s forwards;
+  font-size: larger;
 }
 .menuHeaderClose {
   position: absolute;
@@ -20,6 +21,7 @@
 .menuHeaderList > li:hover,
 .menuHeaderClose:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 @keyframes slideIn {
@@ -36,5 +38,11 @@
   }
   to {
     left: -25vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menuHeader {
+    width: 40vw;;
   }
 }

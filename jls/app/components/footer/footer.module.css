@@ -8,9 +8,21 @@
 
 .footerList > li {
   padding: 3% 0%;
+  display: flex;
+  align-items: center;
+}
+
+.footerList > li :hover {
+  text-decoration: underline;
 }
 
 .footerTitle {
   font-family: var(--title-font);
   text-decoration: underline;
+}
+
+@media screen and (max-width: 425px) {
+  .footer {
+    font-size: small;
+  }
 }

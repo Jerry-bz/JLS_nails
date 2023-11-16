@@ -15,3 +15,10 @@
   font-family: var(--title-font);
   margin: auto;
 }
+
+
+@media  screen and (max-width: 1024px) { 
+  .header {
+    font-size: small;
+  }
+ }
