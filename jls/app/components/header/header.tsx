@@ -1,11 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+
 import MenuHeader from "../menu/menuHeader";
 import styles from "./header.module.css";
+import Link from "next/link";
 
-export default function Header() {
-  const [isMenuVisible, setMenuVisible] = useState(false);
+export default function Header(): JSX.Element {
+  const [isMenuVisible, setMenuVisible] = useState<boolean>(false);
 
   const showMenu = () => {
     setMenuVisible(true);
@@ -27,7 +29,9 @@ export default function Header() {
             height={35}
           />
         </nav>
-        <h1 className={styles.headerNavTitle}>{`JLS NAIL'S`}</h1>
+        <h1 className={styles.headerNavTitle}>
+          <Link href={"/"}>{`JLS NAIL'S`}</Link>
+        </h1>
       </header>
       {isMenuVisible && <MenuHeader onClose={hideMenu} />}
     </>

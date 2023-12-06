@@ -4,6 +4,8 @@
   background-color: var(--background-color);
   justify-content: space-around;
   padding: 1% 0%;
+  font-size: large;
+  font-family: var(--primary-font);
 }
 
 .footerList > li {
@@ -21,8 +23,20 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 425px) {
+@media (max-width: 425px)  {
   .footer {
     font-size: small;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 1100px) {
+  .footer {
+    font-size: small;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 800px) {
+  .footer {
+    font-size: x-small;
   }
 }

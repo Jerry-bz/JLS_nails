@@ -31,10 +31,11 @@ export default function Footer() {
                 target="_blank"
               >
                 <Image
+                  style={{ marginRight: "3px" }}
                   src="assets/facebook.svg"
                   alt="logo-facebook"
-                  width={25}
-                  height={25}
+                  width={30}
+                  height={30}
                 ></Image>
                 Facebook
               </Link>
@@ -50,10 +51,11 @@ export default function Footer() {
                 target="_blank"
               >
                 <Image
+                  style={{ marginRight: "3px" }}
                   src="assets/instagram.svg"
                   alt="logo-instagram"
-                  width={25}
-                  height={25}
+                  width={30}
+                  height={30}
                 ></Image>
                 Instagram
               </Link>

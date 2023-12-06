@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "./menuHeader.module.css";
 
 /**
- * Composant MenuHeader - Ce composant représente un menu d'en-tête.
+ * Composant MenuHeader - Ce composant représente le menu.
  *
  * @param {MenuHeaderProps} props - Les propriétés du composant MenuHeader.
  * @returns {JSX.Element} Le composant MenuHeader.
@@ -19,7 +19,7 @@ export default function MenuHeader({ onClose }: MenuHeaderProps): JSX.Element {
       <div className={styles.menuHeader}>
         <div onClick={onClose} className={styles.menuHeaderClose}>
           <Image
-            src="/assets/close.svg"
+            src="/assets/closeMenu.svg"
             alt="close-page"
             width={25}
             height={25}

@@ -1,0 +1,68 @@
+.mainPrices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainTable {
+  border-radius: 15px;
+  padding: 1em;
+  font-family: var(--primary-font);
+  font-size: large;
+  box-shadow: 1px 1px 2px 2px #00000080;
+  background-color: white;
+  animation: fadeInUp 1s ease-in-out;
+  width: 40vw;
+  height: 60vh;
+}
+
+.mainTable caption {
+  font-family: var(--title-font);
+  font-size: x-large;
+  padding: 1em 0em;
+  text-decoration: underline;
+}
+
+.mainTable th {
+  font-weight: 300;
+  color: var(--title-color);
+  border-top: 1px solid var(--title-color);
+  border-bottom: 1px solid var(--title-color);
+}
+
+.alignRight {
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .mainTable {
+    margin-bottom: 5rem;
+    width: 85vw;
+    font-size: medium;
+  }
+
+  .mainTable caption {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 1100px) {
+  .mainTable {
+    font-size: smaller;
+  }
+
+  .mainTable caption {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 800px) {
+  .mainTable {
+    font-size: small;
+  }
+
+  .mainTable caption {
+    font-size: x-small;
+  }
+}

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import styles from "../home/home.module.css";
 
@@ -13,7 +13,7 @@ export default function HomePage() {
       <main className={styles.mainHome}>
         <section className={styles.homeIntro}>
           <Image
-            src={"/assets/photo-profil.jpg"}
+            src={"/assets/logoJLSnail's.jpg"}
             width={200}
             height={200}
             alt="photo-profil"
@@ -26,19 +26,19 @@ export default function HomePage() {
         </section>
         <section className={styles.homePhoto}>
           <Image
-            src={"/assets/photo-home-1.jpg"}
+            src={"/assets/photoHome-1.jpg"}
             width={250}
             height={250}
             alt="photo-accueil-1"
           ></Image>
           <Image
-            src={"/assets/photo-home-2.jpg"}
+            src={"/assets/photoHome-2.jpg"}
             width={250}
             height={250}
             alt="photo-accueil-2"
           ></Image>
           <Image
-            src={"/assets/photo-home-3.jpg"}
+            src={"/assets/photoHome-3.jpg"}
             width={250}
             height={250}
             alt="photo-accueil-3"

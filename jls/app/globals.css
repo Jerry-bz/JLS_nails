@@ -40,7 +40,8 @@ body {
 
 main {
   flex: 1;
-  animation: slideMain 1s ease;
+  animation: fadeInUp 1s ease;
+  background-color: #db8c9037;
 }
 
 a {
@@ -54,11 +55,18 @@ ul {
   padding: 0;
 }
 
-@keyframes slideMain {
-  from {
-    transform: translateY(20vh);
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Déplacement vers le haut */
   }
-  to {
-    transform: translateY(0);
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Aucun déplacement, position finale */
   }
 }
