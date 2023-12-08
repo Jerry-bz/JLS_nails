@@ -4,13 +4,24 @@ import React, { useState, useEffect } from "react";
 import data from "../../data/data.json";
 import Image from "next/image";
 import styles from "./picturesGallery.module.css";
+import Lightbox from "../lighbox/lightbox";
+
 
 export default function PicturesGallery() {
+  const [showLightbox, setShowLightbox] = useState(false)
   const [currentCategory, setCurrentCategory] = useState("Tous");
 
   useEffect(() => {
     setCurrentCategory("Tous");
   }, []);
+
+  const openLightbox = () => {
+    setShowLightbox(() => true)
+  }
+
+  const closeLightbox = () => {
+    setShowLightbox(() => false)
+  }
 
   return (
     <>
@@ -68,6 +79,7 @@ export default function PicturesGallery() {
               .map((image, index) => (
                 <div key={`${image.id}_${index}`}>
                   <Image
+                    onClick={openLightbox}
                     className={styles.servicesImg}
                     src={image.url}
                     alt={image.category}
@@ -87,6 +99,7 @@ export default function PicturesGallery() {
                 />
               </div>
             ))}
+            {showLightbox && <Lightbox close = {closeLightbox}/>}
       </section>
     </>
   );

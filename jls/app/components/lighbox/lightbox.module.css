@@ -1,0 +1,57 @@
+.lightbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.lightboxImg {
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.lightboxLeft {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transition: background-color 1s ease, transform 1s ease;
+}
+
+.lightboxRight {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transition: background-color 1s ease, transform 1s ease;
+}
+
+.lightboxClose:hover,
+.lightboxLeft:hover,
+.lightboxRight:hover {
+  cursor: pointer;
+  background-color: var(--intermediate-color);
+}
+.lightboxClose:hover {
+  transform: rotate(90deg);
+}
+
+.lightboxLeft:hover {
+  transform: translateX(-10px);
+}
+
+.lightboxRight:hover {
+  transform: translateX(10px);
+}
