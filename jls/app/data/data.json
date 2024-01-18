@@ -1,38 +1,78 @@
 {
   "Chablon": [
-    { "id": 1, "url": "/assets/chablons/chablon01.jpg", "category": "Chablon" },
-    { "id": 2, "url": "/assets/chablons/chablon02.jpg", "category": "Chablon" },
-    { "id": 3, "url": "/assets/chablons/chablon03.jpg", "category": "Chablon" },
-    { "id": 4, "url": "/assets/chablons/chablon04.jpg", "category": "Chablon" },
-    { "id": 5, "url": "/assets/chablons/chablon05.jpg", "category": "Chablon" },
-    { "id": 6, "url": "/assets/chablons/chablon06.jpg", "category": "Chablon" },
-    { "id": 7, "url": "/assets/chablons/chablon07.jpg", "category": "Chablon" },
-    { "id": 8, "url": "/assets/chablons/chablon08.jpg", "category": "Chablon" },
-    { "id": 9, "url": "/assets/chablons/chablon09.jpg", "category": "Chablon" },
     {
-      "id": 10,
-      "url": "/assets/chablons/chablon10.jpg",
+      "id": "chablon01",
+      "url": "/pictures/chablons/chablon01.jpg",
       "category": "Chablon"
     },
-    { "id": 11, "url": "/assets/chablons/chablon11.jpg", "category": "Chablon" }
+    {
+      "id": "chablon02",
+      "url": "/pictures/chablons/chablon02.jpg",
+      "category": "Chablon"
+    },
+    {
+      "id": "chablon03",
+      "url": "/pictures/chablons/chablon03.jpg",
+      "category": "Chablon"
+    },
+    {
+      "id": "chablon04",
+      "url": "/pictures/chablons/chablon04.jpg",
+      "category": "Chablon"
+    },
+    {
+      "id": "chablon05",
+      "url": "/pictures/chablons/chablon05.jpg",
+      "category": "Chablon"
+    },
+    {
+      "id": "chablon06",
+      "url": "/pictures/chablons/chablon06.jpg",
+      "category": "Chablon"
+    },
+    {
+      "id": "chablon07",
+      "url": "/pictures/chablons/chablon07.jpg",
+      "category": "Chablon"
+    },
+    {
+      "id": "chablon08",
+      "url": "/pictures/chablons/chablon08.jpg",
+      "category": "Chablon"
+    },
+    {
+      "id": "chablon09",
+      "url": "/pictures/chablons/chablon09.jpg",
+      "category": "Chablon"
+    },
+    {
+      "id": "chablon10",
+      "url": "/pictures/chablons/chablon10.jpg",
+      "category": "Chablon"
+    },
+    {
+      "id": "chablon11",
+      "url": "/pictures/chablons/chablon11.jpg",
+      "category": "Chablon"
+    }
   ],
   "Gel": [
-    { "id": 1, "url": "/assets/gel/gel01.jpg", "category": "Gel" },
-    { "id": 2, "url": "/assets/gel/gel02.jpg", "category": "Gel" },
-    { "id": 3, "url": "/assets/gel/gel03.jpg", "category": "Gel" },
-    { "id": 4, "url": "/assets/gel/gel04.jpg", "category": "Gel" },
-    { "id": 5, "url": "/assets/gel/gel05.jpg", "category": "Gel" },
-    { "id": 6, "url": "/assets/gel/gel06.jpg", "category": "Gel" }
+    { "id": "gel01", "url": "/pictures/gel/gel01.jpg", "category": "Gel" },
+    { "id": "gel02", "url": "/pictures/gel/gel02.jpg", "category": "Gel" },
+    { "id": "gel03", "url": "/pictures/gel/gel03.jpg", "category": "Gel" },
+    { "id": "gel04", "url": "/pictures/gel/gel04.jpg", "category": "Gel" },
+    { "id": "gel05", "url": "/pictures/gel/gel05.jpg", "category": "Gel" },
+    { "id": "gel06", "url": "/pictures/gel/gel06.jpg", "category": "Gel" }
   ],
   "VSP": [
-    { "id": 1, "url": "/assets/vsp/vsp01.jpg", "category": "VSP" },
-    { "id": 2, "url": "/assets/vsp/vsp02.jpg", "category": "VSP" },
-    { "id": 3, "url": "/assets/vsp/vsp03.jpg", "category": "VSP" },
-    { "id": 4, "url": "/assets/vsp/vsp04.jpg", "category": "VSP" },
-    { "id": 5, "url": "/assets/vsp/vsp05.jpg", "category": "VSP" },
-    { "id": 6, "url": "/assets/vsp/vsp06.jpg", "category": "VSP" },
-    { "id": 7, "url": "/assets/vsp/vsp07.jpg", "category": "VSP" },
-    { "id": 8, "url": "/assets/vsp/vsp08.jpg", "category": "VSP" },
-    { "id": 9, "url": "/assets/vsp/vsp09.jpg", "category": "VSP" }
+    { "id": "vsp01", "url": "/pictures/vsp/vsp01.jpg", "category": "VSP" },
+    { "id": "vsp02", "url": "/pictures/vsp/vsp02.jpg", "category": "VSP" },
+    { "id": "vsp03", "url": "/pictures/vsp/vsp03.jpg", "category": "VSP" },
+    { "id": "vsp04", "url": "/pictures/vsp/vsp04.jpg", "category": "VSP" },
+    { "id": "vsp05", "url": "/pictures/vsp/vsp05.jpg", "category": "VSP" },
+    { "id": "vsp06", "url": "/pictures/vsp/vsp06.jpg", "category": "VSP" },
+    { "id": "vsp07", "url": "/pictures/vsp/vsp07.jpg", "category": "VSP" },
+    { "id": "vsp08", "url": "/pictures/vsp/vsp08.jpg", "category": "VSP" },
+    { "id": "vsp09", "url": "/pictures/vsp/vsp09.jpg", "category": "VSP" }
   ]
 }

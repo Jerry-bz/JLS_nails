@@ -19,7 +19,7 @@
 
 .homeIntro > h2 {
   font-family: var(--title-font);
-  padding: 3% 2%;
+  padding: 1.5em;
   text-align: center;
 }
 

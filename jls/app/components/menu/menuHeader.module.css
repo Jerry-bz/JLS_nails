@@ -18,11 +18,11 @@
   color: white;
 }
 
-.menuHeaderList > li:hover,
-.menuHeaderClose:hover {
+.menuHeaderList > li:hover,.menuHeaderClose:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+
 
 @keyframes slideIn {
   from {
@@ -43,6 +43,6 @@
 
 @media screen and (max-width: 768px) {
   .menuHeader {
-    width: 40vw;;
+    width: 40vw;
   }
 }
