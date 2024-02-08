@@ -23,6 +23,8 @@ export default function PicturesGallery() {
   // Utilisation du hook useReducer pour l"état globale de l'application
   const [dataState, dispatch] = useReducer(dataImgReducer, data);
 
+  console.log(dataState, 'data');
+
   // Effet pour initialiser la catégorie actuelle à "Tous" lors du montage du composant
   useEffect(() => {
     setCurrentCategory("Tous");
@@ -66,61 +68,73 @@ export default function PicturesGallery() {
   return (
     <>
       <div className={styles.services}>
-      {/* Boutons pour sélectionner la catégorie */}
-      <div className={styles.servicesMenu}>
-        <section className={styles.servicesMenuButton}>
-          <button
-            className={
-              currentCategory === "Tous"
-                ? styles.activeButton
-                : styles.inactiveButton
-            }
-            onClick={() => changeCategory("Tous")}
-          >
-            Tous
-          </button>
-          <button
-            className={
-              currentCategory === "Chablon"
-                ? styles.activeButton
-                : styles.inactiveButton
-            }
-            onClick={() => {
-              changeCategory("Chablon");
-            }}
-          >
-            Chablon
-          </button>
-          <button
-            className={
-              currentCategory === "Gel"
-                ? styles.activeButton
-                : styles.inactiveButton
-            }
-            onClick={() => changeCategory("Gel")}
-          >
-            Gel sur ongle naturel
-          </button>
-          <button
-            className={
-              currentCategory === "VSP"
-                ? styles.activeButton
-                : styles.inactiveButton
-            }
-            onClick={() => changeCategory("VSP")}
-          >
-            VSP
-          </button>
-        </section>
-      </div>
+        {/* Boutons pour sélectionner la catégorie */}
+        <div className={styles.servicesMenu}>
+          <section className={styles.servicesMenuButton}>
+            <button
+              className={
+                currentCategory === "Tous"
+                  ? styles.activeButton
+                  : styles.inactiveButton
+              }
+              onClick={() => changeCategory("Tous")}
+            >
+              Tous
+            </button>
+            <button
+              className={
+                currentCategory === "Extension"
+                  ? styles.activeButton
+                  : styles.inactiveButton
+              }
+              onClick={() => {
+                changeCategory("Extension");
+              }}
+            >
+              extension
+            </button>
+            <button
+              className={
+                currentCategory === "Gel"
+                  ? styles.activeButton
+                  : styles.inactiveButton
+              }
+              onClick={() => changeCategory("Gel")}
+            >
+              Gel sur ongle naturel
+            </button>
+            <button
+              className={
+                currentCategory === "VSP"
+                  ? styles.activeButton
+                  : styles.inactiveButton
+              }
+              onClick={() => changeCategory("VSP")}
+            >
+              VSP
+            </button>
+          </section>
+        </div>
 
-      {/* Affichage des images en fonction de la catégorie sélectionnée */}
-      <section className={styles.servicesPresentation}>
-        {currentCategory === "Tous"
-          ? Object.values(data)
-            .flat()
-            .map((image, index) => (
-              <div key={`${image.id}_${index}`}>
+        {/* Affichage des images en fonction de la catégorie sélectionnée */}
+        <section className={styles.servicesPresentation}>
+          {currentCategory === "Tous"
+            ? Object.values(data)
+              .flat()
+              .map((image, index) => (
+                <div key={`${image.id}_${index}`}>
+                  <Image
+                    onClick={() => openLightbox(image.id)}
+                    className={styles.servicesImg}
+                    src={image.url}
+                    alt={`Prestation ${image.category}`}
+                    width={200}
+                    height={200}
+                  />
+                </div>
+              ))
+            : data[currentCategory].map((image) => (
+              <div key={image.id}>
                 <Image
                   onClick={() => openLightbox(image.id)}
                   className={styles.servicesImg}
@@ -130,22 +144,10 @@ export default function PicturesGallery() {
                   height={200}
                 />
               </div>
-            ))
-          : data[currentCategory].map((image) => (
-            <div key={image.id}>
-              <Image
-                onClick={() => openLightbox(image.id)}
-                className={styles.servicesImg}
-                src={image.url}
-                alt={`Prestation ${image.category}`}
-                width={200}
-                height={200}
-              />
-            </div>
-          ))}
-        {/* Affichage de la lightbox si showLightbox est vrai */}
-        {showLightbox && <Lightbox close={closeLightbox} dataComponent={dataState} />}
-      </section>
+            ))}
+          {/* Affichage de la lightbox si showLightbox est vrai */}
+          {showLightbox && <Lightbox close={closeLightbox} dataComponent={dataState} />}
+        </section>
       </div>
     </>
   );

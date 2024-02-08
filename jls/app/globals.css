@@ -10,15 +10,15 @@
     format("woff2");
 }
 
-/* EB Garamond font */
+/* Raleway */
+
 /* latin */
 @font-face {
-  font-family: "EB Garamond";
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ebgaramond/v27/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-6_RkBI9_.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/raleway/v29/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrE.woff2) format('woff2');
 }
 
 :root {
@@ -26,7 +26,7 @@
   --foreground-color: #eec3ae;
   --intermediate-color: #db8c90;
   --title-font: "Spectral SC", serif;
-  --primary-font: "EB Garamond", serif;
+  --primary-font: 'Raleway', sans-serif;
   --title-color: #b23d3b;
 }
 
@@ -41,7 +41,6 @@ body {
 main {
   flex: 1;
   animation: fadeInUp 1s ease;
-  background-color: #db8c9037;
 }
 
 a {

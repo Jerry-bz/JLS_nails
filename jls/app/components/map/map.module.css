@@ -1,0 +1,14 @@
+.map {
+height: 50vh;
+width: 50vw;
+padding: 2em;
+z-index: 0;
+}
+
+.mapLocalisation {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5em;
+    white-space: nowrap; /* Pour empêcher le texte de se diviser sur plusieurs lignes */
+    color: red;
+}

@@ -14,7 +14,7 @@ const dataImgReducer = (state, action) => {
       return { dataImg: dataImgArray };
 
     // Données Chablon
-    case "Chablon": {
+    case "Extension": {
       console.log(action, "action");
       return { dataImg: action.payload };
     }

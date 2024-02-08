@@ -36,6 +36,9 @@ export default function MenuHeader({ onClose }) {
             <Link href={"/prices"}>Tarifs</Link>
           </li>
           <li>
+            <Link href={"/contact"}>Contact</Link>
+          </li>
+          <li>
             <Link href={"/about"}>À propos</Link>
           </li>
         </ul>

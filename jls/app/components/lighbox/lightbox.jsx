@@ -16,7 +16,7 @@ function Lightbox({ close, dataComponent }) {
   // Récupère l'image de la Lightbox et le store
   const { idImg, dataImg } = dataComponent;
 
-  console.log(dataComponent,'data');
+
 
   // Récupere l'index de l'image de la lightbox
   const initialIndex = dataImg.findIndex((element) => element.id === idImg);
@@ -60,7 +60,7 @@ function Lightbox({ close, dataComponent }) {
       <Image
         className={styles.lightboxImg}
         src={dataImg[index].url}
-        alt="image-lightbox"
+        alt={`Prestation ${dataImg[index].category}`}
         width={800}
         height={800}
       />
