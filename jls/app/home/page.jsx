@@ -25,7 +25,7 @@ export default function HomePage() {
         <div className={styles.homeDescription}>
           <Image
             className={styles.homeImage}
-            src={"/pictures/photoProfil.webp"}
+            src={"/pictures/divers/photoProfil.webp"}
             width={350}
             height={700}
             alt="logo-JLSnail's"
@@ -35,7 +35,7 @@ export default function HomePage() {
               Moi, c’est Samantha, je suis prothésiste ongulaire et je serai
               ravi de vous accueillir dans une ambiance chaleureuse au{" "}
               <span className={styles.homeLink}>
-                <Link onClick={mapIsTrue} href="/#map">8 route de Gien à Léré</Link>
+                <Link onClick={mapIsTrue} href="/#map" aria-label="localisation de l'entreprise">8 route de Gien à Léré</Link>
               </span>{" "}
               , entre Cosne-Cours-sur-Loire (58) et Belleville-sur-Loire(18)
               dans le département du cher (18).
@@ -43,7 +43,7 @@ export default function HomePage() {
             <p>
               Diplômée depuis octobre 2021, j’ai appris grâce à diverses{" "}
               <span className={styles.homeLink}>
-                <Link href="/about">formations</Link>
+                <Link href="/about" aria-label="À propos">formations</Link>
               </span>{" "}
               plusieurs techniques afin de m’adapter à tout type d’ongles :
               ongles crochus, rongés, fragilisés , long, courts…
@@ -55,13 +55,13 @@ export default function HomePage() {
             </p>
             <div className={styles.homeInformations}>
               <button>
-                <Link href={"/services"}>Mes services</Link>
+                <Link href={"/services"} aria-label="Mes services">Mes services</Link>
               </button>
               <button>
-                <Link href={"/prices"}>Mes Tarifs</Link>
+                <Link href={"/prices"} aria-label="Tarifs">Mes Tarifs</Link>
               </button>
               <button>
-                <Link href={"/contact"}>Me Contacter</Link>
+                <Link href={"/contact"} aria-label="Contact">Me Contacter</Link>
               </button>
             </div>
           </div>

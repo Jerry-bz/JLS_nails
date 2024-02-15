@@ -20,7 +20,7 @@ export default function AboutPage() {
         <section className={styles.aboutIntro}>
           <Image
             className={styles.aboutImg}
-            src={"/pictures/photoApropos.webp"}
+            src={"/pictures/divers/photoApropos.webp"}
             width={200}
             height={200}
             alt="logo-entreprise"
@@ -107,6 +107,29 @@ export default function AboutPage() {
             nettoyer après chaque clientes et les outils sont désinfectés et
             stérilisés après chaque utilisation.
           </p>
+        </section>
+        <section className={styles.aboutLocal}>
+          <h2 className={styles.aboutTitle}>Local et désinfection</h2>
+          <div>
+          <Image className={styles.aboutLocalImage}
+            src={"/pictures/divers/local01.webp"}
+            width={300}
+            height={300}
+            alt="affichage du local01"
+          ></Image>
+          <Image className={styles.aboutLocalImage}
+            src={"/pictures/divers/local02.webp"}
+            width={300}
+            height={300}
+            alt="affichage du local02"
+          ></Image>
+          <Image className={styles.aboutLocalImage}
+            src={"/pictures/divers/local03.webp"}
+            width={300}
+            height={300}
+            alt="affichage des outils de désinfection"
+          ></Image>
+          </div>
         </section>
       </main>
     </>

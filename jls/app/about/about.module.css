@@ -8,6 +8,7 @@
 .aboutIntro {
   display: flex;
   flex-direction: column;
+  padding: 1em;
 }
 
 .aboutImg {
@@ -38,6 +39,35 @@
 .aboutList {
   display: flex;
   column-gap: 1em;
+}
+
+.aboutLocal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+.aboutLocal div {
+  display: flex;
+  column-gap: 2em;
+}
+
+.aboutLocalImage {
+  border-radius:10px 10px 0px 0px;
+}
+
+@media (max-width: 1024px) {
+  .aboutLocalImage {
+    width: 200px;
+    height: 200px;
+  }
+
+  .aboutLocal div {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 2em;
+  }
 }
 
 @media (max-width: 900px) {

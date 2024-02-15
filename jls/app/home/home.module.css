@@ -34,7 +34,8 @@
 }
 
 .homeLink {
-  color: red;
+  color: #165ea7;
+  font-weight: bolder;
 }
 
 .homePresentation p {

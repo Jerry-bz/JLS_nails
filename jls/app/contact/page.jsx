@@ -76,7 +76,7 @@ export default function contactPage() {
                 >
                   <Image
                     src="pictures/svg/instagram.svg"
-                    alt="logo-facebook"
+                    alt="logo-instagram"
                     width={30}
                     height={30}
                   ></Image>

@@ -23,7 +23,7 @@ export default function PicturesGallery() {
   // Utilisation du hook useReducer pour l"état globale de l'application
   const [dataState, dispatch] = useReducer(dataImgReducer, data);
 
-  console.log(dataState, 'data');
+
 
   // Effet pour initialiser la catégorie actuelle à "Tous" lors du montage du composant
   useEffect(() => {
@@ -127,7 +127,7 @@ export default function PicturesGallery() {
                     onClick={() => openLightbox(image.id)}
                     className={styles.servicesImg}
                     src={image.url}
-                    alt={`Prestation ${image.category}`}
+                    alt={`Prestation ${image.id}`}
                     width={200}
                     height={200}
                   />
@@ -139,7 +139,7 @@ export default function PicturesGallery() {
                   onClick={() => openLightbox(image.id)}
                   className={styles.servicesImg}
                   src={image.url}
-                  alt={`Prestation ${image.category}`}
+                  alt={`Prestation ${image.id}`}
                   width={200}
                   height={200}
                 />

@@ -14,19 +14,16 @@ export default function Footer() {
     <>
       <footer className={styles.footer}>
         <div>
-          <h3 className={styles.footerTitle}>Informations</h3>
+          <h2 className={styles.footerTitle}>Informations</h2>
           <ul className={styles.footerList}>
             <li>Numéro de Siren : 919561126 </li>
             <li>
-              <Link href={"/contact"}>Contacter moi</Link>
-            </li>
-            <li>
-              <Link href={"/about"}>A propos</Link>
+              <Link href={"/about"} aria-label="À propos">A propos</Link>
             </li>
           </ul>
         </div>
         <div>
-          <h3 className={styles.footerTitle}>Mes Réseaux</h3>
+          <h2 className={styles.footerTitle}>Mes Réseaux</h2>
           <ul className={styles.footerList}>
             <li>
               <Link
@@ -37,6 +34,7 @@ export default function Footer() {
                 }}
                 href="https://www.facebook.com/profile.php?id=100084753964757"
                 target="_blank"
+                aria-label="Page Facebook"
               >
                 <Image
                   src="pictures/svg/facebook.svg"
@@ -56,6 +54,7 @@ export default function Footer() {
                 }}
                 href="https://www.instagram.com/jls_nail18?igshid=ZnVkcWZ2ZnZtZmht&utm_source=qr&fbclid=IwAR35T-FXezNcU7mC8D1nL5DmBEO_8q7IYFIAZuKEujjYSUQwOsDIfs3k8Og"
                 target="_blank"
+                aria-label="Page Instagram"
               >
                 <Image
                   src="pictures/svg/instagram.svg"

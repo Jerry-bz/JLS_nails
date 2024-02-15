@@ -11,7 +11,7 @@ export const metadata = {
   description:"Découvrez l'univers de JLS NAIL'S, votre destination de choix pour la santé et la beauté de vos ongles.\nLaissez-moi exprimer votre style avec confiance et élégance."
   ,
   icons: {
-    icon: ["/logoJLS.ico"]
+    icon: ["/favicon.ico"]
   },
 };
 
@@ -19,7 +19,7 @@ export default function RootLayout({
   children,
 }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body className={inter.className}>
         <Header></Header>
         {children}

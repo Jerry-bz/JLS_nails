@@ -100,7 +100,7 @@ export default function PricesPage() {
 
             <tr>
               <td>Réparation ongle cassé</td>
-              <td className={styles.alignRight}>5€</td>
+              <td className={styles.alignRight}>2€</td>
             </tr>
           </tbody>
         </table>
