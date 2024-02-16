@@ -1,5 +1,5 @@
 .lightbox {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   min-height: 100vh;
@@ -58,7 +58,7 @@
   transform: translateX(5px);
 }
 
-@media (max-width: 1440px)  {
+@media (max-width: 1440px) {
   .lightboxImg {
     width: 600px;
     height: 600px;
@@ -68,21 +68,18 @@
   }
 }
 
-@media (max-width: 1024px)  {
+@media (max-width: 1024px) {
+  .lightboxImg {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
   .lightboxImg {
     width: 500px;
     height: 500px;
   }
-}
-
-
-
-@media (max-width: 768px)  {
-  .lightboxImg {
-    width: 300px;
-    height: 300px;
-  }
-
   .lightboxClose,
   .lightboxLeft,
   .lightboxRight {
@@ -95,19 +92,19 @@
   }
 }
 
-@media (max-width: 500px)  {
+@media (max-width: 500px) {
   .lightboxImg {
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 350px;
   }
   .lightboxClose {
-    top: 30%;
+    top: 15%;
   }
 }
 
-@media (max-width: 350px)  {
+@media (max-width: 400px) {
   .lightboxImg {
-    width: 130px;
-    height: 130px;
+    width: 300px;
+    height: 300px;
   }
 }

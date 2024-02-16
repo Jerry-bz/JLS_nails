@@ -6,7 +6,7 @@ import styles from "@/app/contact/contact.module.css";
 export const metadata = {
   title: "Contactez - JLS Nail's",
   description:
-    "Consultez les informations pour afin de me conatcter et prendre un rendez vous.",
+    "Consultez les informations pour afin de me contacter et prendre un rendez vous.",
 };
 
 /**

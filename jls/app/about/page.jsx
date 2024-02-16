@@ -111,24 +111,24 @@ export default function AboutPage() {
         <section className={styles.aboutLocal}>
           <h2 className={styles.aboutTitle}>Local et désinfection</h2>
           <div>
-          <Image className={styles.aboutLocalImage}
-            src={"/pictures/divers/local01.webp"}
-            width={300}
-            height={300}
-            alt="affichage du local01"
-          ></Image>
-          <Image className={styles.aboutLocalImage}
-            src={"/pictures/divers/local02.webp"}
-            width={300}
-            height={300}
-            alt="affichage du local02"
-          ></Image>
-          <Image className={styles.aboutLocalImage}
-            src={"/pictures/divers/local03.webp"}
-            width={300}
-            height={300}
-            alt="affichage des outils de désinfection"
-          ></Image>
+            <Image className={styles.aboutLocalImage}
+              src={"/pictures/divers/local01.webp"}
+              width={300}
+              height={300}
+              alt="affichage du local01"
+            ></Image>
+            <Image className={styles.aboutLocalImage}
+              src={"/pictures/divers/local02.webp"}
+              width={300}
+              height={300}
+              alt="affichage du local02"
+            ></Image>
+            <Image className={styles.aboutLocalImage}
+              src={"/pictures/divers/local03.webp"}
+              width={300}
+              height={300}
+              alt="affichage des outils de désinfection"
+            ></Image>
           </div>
         </section>
       </main>

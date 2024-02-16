@@ -17,7 +17,6 @@ function Lightbox({ close, dataComponent }) {
   const { idImg, dataImg } = dataComponent;
 
 
-
   // Récupere l'index de l'image de la lightbox
   const initialIndex = dataImg.findIndex((element) => element.id === idImg);
 

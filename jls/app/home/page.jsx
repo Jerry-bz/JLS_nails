@@ -5,6 +5,9 @@ import Link from "next/link";
 import styles from "../home/home.module.css";
 import Map from "../components/map/maps";
 
+
+
+
 /**
  * @component
  * @returns {Component} - HomePage
@@ -25,7 +28,7 @@ export default function HomePage() {
         <div className={styles.homeDescription}>
           <Image
             className={styles.homeImage}
-            src={"/pictures/divers/photoProfil.webp"}
+            src="/pictures/divers/photoProfil.webp"
             width={350}
             height={700}
             alt="logo-JLSnail's"

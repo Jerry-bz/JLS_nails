@@ -5,6 +5,8 @@ import MenuHeader from "../menu/menuHeader";
 import styles from "./header.module.css";
 import Link from "next/link";
 
+
+
 /**
  * @component
  * Composant qui affiche le header
