@@ -12,11 +12,33 @@
   padding: 1em;
 }
 
+.servicesContainerButton {
+  position: relative;
+}
+.servicesContainerButton img {
+  position: absolute;
+  top: 3px; /* Ajustez cette valeur selon vos besoins */
+  right: 5px; /* Ajustez cette valeur selon vos besoins */
+  z-index: 1;
+}
+
+.activeButton,.inactiveButton {
+  height: 5vh;
+  width: 10vw;
+}
+
+.activeButton {
+  border: none;
+  border-radius: 10px;
+  animation: fillButton 0.5s ease-in-out forwards;
+  font-family: var(--title-font);
+  font-weight: bolder;
+}
+
 .inactiveButton {
   background-color: none;
   border: none;
   border-radius: 10px;
-  width: 10vw;
   font-family: var(--title-font);
   font-weight: bolder;
 }
@@ -25,15 +47,7 @@
   cursor: pointer;
 }
 
-.activeButton {
-  border: none;
-  border-radius: 10px;
-  height: 3vh;
-  width: 10vw;
-  animation: fillButton 0.5s ease-in-out forwards;
-  font-family: var(--title-font);
-  font-weight: bolder;
-}
+
 
 .activeButton:hover {
   cursor: pointer;
@@ -79,15 +93,21 @@
 }
 
 @media (max-width: 500px) {
+
+  .servicesMenuButton {
+    column-gap: 25px;
+  }
+  
   .activeButton,
   .inactiveButton {
-    width: 50vw;
+    width: 30vw;
+    height: 10vh;
     font-size: 0.7em;
   }
 
   .servicesImg {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
   }
 }
 

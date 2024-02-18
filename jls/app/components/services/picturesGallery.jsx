@@ -3,9 +3,8 @@
 import React, { useState, useEffect, useReducer } from "react";
 import Image from "next/image";
 import styles from "./picturesGallery.module.css";
-import Lightbox from "../lighbox/lightbox";
+import LightboxService from "../lightbox/service";
 import { dataImgReducer, data } from "../../state/globalSate";
-
 
 /**
  * @component
@@ -17,31 +16,27 @@ export default function PicturesGallery() {
   // État initial de l'affichage du menu = false
   const [showLightbox, setShowLightbox] = useState(false);
 
-  // Catégorie initiale 
+  // Catégorie initiale
   const [currentCategory, setCurrentCategory] = useState("Tous");
 
   // Utilisation du hook useReducer pour l"état globale de l'application
   const [dataState, dispatch] = useReducer(dataImgReducer, data);
-
-
 
   // Effet pour initialiser la catégorie actuelle à "Tous" lors du montage du composant
   useEffect(() => {
     setCurrentCategory("Tous");
     dispatch({
       // Nom de la Catégorie
-      type: 'Tous'
+      type: "Tous",
     });
   }, []);
-
-
 
   // Fonction pour ouvrir la lightbox et envoyer idImage
   const openLightbox = (element) => {
     setShowLightbox(true);
     dispatch({
       // Nom de la Catégorie
-      type: 'Image',
+      type: "Image",
       // donées envoyé au state
       payload: element,
     });
@@ -50,6 +45,11 @@ export default function PicturesGallery() {
   // Fonction pour fermer la lightbox
   const closeLightbox = () => {
     setShowLightbox(false);
+  };
+
+  // Fonction pour afficher l'information
+  const getInformation = () => {
+    setShowInformation((prev) => !prev);
   };
 
   // Fonction pour changer de catégory
@@ -63,56 +63,101 @@ export default function PicturesGallery() {
     });
   };
 
-
-
   return (
     <>
       <div className={styles.services}>
         {/* Boutons pour sélectionner la catégorie */}
         <div className={styles.servicesMenu}>
           <section className={styles.servicesMenuButton}>
-            <button
-              className={
-                currentCategory === "Tous"
-                  ? styles.activeButton
-                  : styles.inactiveButton
-              }
-              onClick={() => changeCategory("Tous")}
-            >
-              Tous
-            </button>
-            <button
-              className={
-                currentCategory === "Extension"
-                  ? styles.activeButton
-                  : styles.inactiveButton
-              }
-              onClick={() => {
-                changeCategory("Extension");
-              }}
-            >
-              extension
-            </button>
-            <button
-              className={
-                currentCategory === "Gel"
-                  ? styles.activeButton
-                  : styles.inactiveButton
-              }
-              onClick={() => changeCategory("Gel")}
-            >
-              Gel sur ongle naturel
-            </button>
-            <button
-              className={
-                currentCategory === "VSP"
-                  ? styles.activeButton
-                  : styles.inactiveButton
-              }
-              onClick={() => changeCategory("VSP")}
-            >
-              VSP
-            </button>
+            <div className={styles.servicesContainerButton}>
+              <button
+                className={
+                  currentCategory === "Tous"
+                    ? styles.activeButton
+                    : styles.inactiveButton
+                }
+                onClick={() => changeCategory("Tous")}
+              >
+                Tous
+              </button>
+            </div>
+            <div className={styles.servicesContainerButton}>
+              {currentCategory === "Extension" && (
+                <Image
+                  onClick={() =>
+                    window.alert(
+                      "L'extension d'ongles en gel consiste à rallonger vos ongles si vous les trouvez trop courts, cassants, dédoublés, si vous les rongez, ou tout simplement parce que vous ne parvenez pas à les faire pousser."
+                    )
+                  }
+                  src="/pictures/svg/infos.svg"
+                  width={20}
+                  height={20}
+                  alt="logo-information"
+                />
+              )}
+              <button
+                className={
+                  currentCategory === "Extension"
+                    ? styles.activeButton
+                    : styles.inactiveButton
+                }
+                onClick={() => changeCategory("Extension")}
+              >
+                extension
+              </button>
+            </div>
+            <div className={styles.servicesContainerButton}>
+              {currentCategory === "Gel" && (
+                <Image
+                  onClick={() =>
+                    window.alert(
+                      "Le renforcement de l'ongle naturel est aussi connu sous le nom de Gainage ou pose de gel sur les ongles naturels. Cette technique consiste à poser du gel sur la longueur naturelle des ongles."
+                    )
+                  }
+                  src="/pictures/svg/infos.svg"
+                  width={20}
+                  height={20}
+                  alt="logo-information"
+                />
+              )}
+              <button
+                className={
+                  currentCategory === "Gel"
+                    ? styles.activeButton
+                    : styles.inactiveButton
+                }
+                onClick={() => changeCategory("Gel")}
+              >
+                Gel sur ongle naturel
+              </button>
+            </div>
+            <>
+              <div className={styles.servicesContainerButton}>
+                {currentCategory === "VSP" && (
+                  <Image
+                    onClick={() =>
+                      window.alert(
+                        "Le vernis Semi-permanent (VSP) est composé d'un gel acrylique pigmenté qui s'applique au pinceau, de la même manière qu'un vernis classique. Il a une tenue de plus ou moins 4 semaines."
+                      )
+                    }
+                    src="/pictures/svg/infos.svg"
+                    width={20}
+                    height={20}
+                    alt="logo-information"
+                  />
+                )}
+                <button
+                  className={
+                    currentCategory === "VSP"
+                      ? styles.activeButton
+                      : styles.inactiveButton
+                  }
+                  onClick={() => changeCategory("VSP")}
+                >
+                  VSP
+                </button>
+              </div>
+            </>
           </section>
         </div>
 
@@ -120,9 +165,21 @@ export default function PicturesGallery() {
         <section className={styles.servicesPresentation}>
           {currentCategory === "Tous"
             ? Object.values(data)
-              .flat()
-              .map((image, index) => (
-                <div key={`${image.id}_${index}`}>
+                .flat()
+                .map((image, index) => (
+                  <div key={`${image.id}_${index}`}>
+                    <Image
+                      onClick={() => openLightbox(image.id)}
+                      className={styles.servicesImg}
+                      src={image.url}
+                      alt={`Prestation ${image.id}`}
+                      width={200}
+                      height={200}
+                    />
+                  </div>
+                ))
+            : data[currentCategory].map((image) => (
+                <div key={image.id}>
                   <Image
                     onClick={() => openLightbox(image.id)}
                     className={styles.servicesImg}
@@ -132,21 +189,11 @@ export default function PicturesGallery() {
                     height={200}
                   />
                 </div>
-              ))
-            : data[currentCategory].map((image) => (
-              <div key={image.id}>
-                <Image
-                  onClick={() => openLightbox(image.id)}
-                  className={styles.servicesImg}
-                  src={image.url}
-                  alt={`Prestation ${image.id}`}
-                  width={200}
-                  height={200}
-                />
-              </div>
-            ))}
+              ))}
           {/* Affichage de la lightbox si showLightbox est vrai */}
-          {showLightbox && <Lightbox close={closeLightbox} dataComponent={dataState} />}
+          {showLightbox && (
+            <LightboxService close={closeLightbox} dataComponent={dataState} />
+          )}
         </section>
       </div>
     </>

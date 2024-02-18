@@ -1,7 +1,7 @@
 .menuHeader {
   height: 100vh;
   width: 35vw;
-  position: absolute;
+  position: fixed;
   margin: 0;
   background-color: var(--intermediate-color);
   font-family: var(--primary-font);
@@ -44,6 +44,6 @@
 
 @media screen and (max-width: 768px) {
   .menuHeader {
-    width: 50vw;
+    width: 60vw;
   }
 }

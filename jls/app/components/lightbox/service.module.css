@@ -1,0 +1,98 @@
+.service {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.serviceImg {
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.serviceClose,
+.serviceLeft,
+.serviceRight {
+  position: absolute;
+  border-radius: 15px;
+}
+
+.serviceClose {
+  top: 5%;
+  right: 8%;
+}
+
+.serviceLeft {
+  left: 8%;
+  top: 50%;
+}
+
+.serviceRight {
+  right: 8%;
+  top: 50%;
+}
+
+.serviceClose:hover,
+.serviceLeft:hover,
+.serviceRight:hover {
+  cursor: pointer;
+  background-color: var(--intermediate-color);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.serviceClose:hover {
+  transform: rotate(90deg);
+}
+
+.serviceLeft:hover {
+  transform: translateX(-10px);
+}
+
+.serviceRight:hover {
+  transform: translateX(10px);
+}
+
+@media (max-width: 1440px) {
+  .serviceImg {
+    width: 600px;
+    height: 600px;
+  }
+  .serviceClose {
+    top: 15%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .serviceImg {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .serviceImg {
+    width: 500px;
+    height: 500px;
+  }
+  .serviceClose,
+  .serviceLeft,
+  .serviceRight {
+    width: 35px;
+    height: 35px;
+  }
+
+  .serviceClose {
+    top: 20%;
+  }
+}
+
+@media (max-width: 500px) {
+  .serviceImg {
+    width: 250px;
+    height: 300px;
+  }
+}

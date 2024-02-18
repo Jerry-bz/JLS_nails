@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import styles from "./lightbox.module.css";
+import React, { useState } from "react";
+import styles from "./service.module.css";
 import Image from "next/image";
 
 /**
@@ -10,29 +10,25 @@ import Image from "next/image";
  * @returns - Lightbox
  */
 
-
 function Lightbox({ close, dataComponent }) {
-
   // Récupère l'image de la Lightbox et le store
   const { idImg, dataImg } = dataComponent;
-
 
   // Récupere l'index de l'image de la lightbox
   const initialIndex = dataImg.findIndex((element) => element.id === idImg);
 
-  // Index initial 
+  // Index initial
   const [index, setIndex] = useState(initialIndex);
 
-
-  // Image précedente 
+  // Image précedente
   const handlePrevious = () => {
     setIndex((prev) => {
       if (index > 0) {
-        return prev - 1
+        return prev - 1;
       }
-      return dataImg.length - 1
+      return dataImg.length - 1;
     });
-  }
+  };
 
   // Image suivante
   const handleNext = () => {
@@ -42,44 +38,43 @@ function Lightbox({ close, dataComponent }) {
       }
       return 0;
     });
-  }
-
+  };
 
   return (
-    <div className={styles.lightbox}>
+    <div className={styles.service}>
       <Image
         // On ajoute la fonction de fermeture
         onClick={close}
-        className={styles.lightboxClose}
+        className={styles.serviceClose}
         src="/pictures/svg/closeMenu.svg"
         alt="fermeture de la lightbox"
-        width={50}
-        height={50}
+        width={75}
+        height={75}
       />
       <Image
-        className={styles.lightboxImg}
+        className={styles.serviceImg}
         src={dataImg[index].url}
         alt={`Prestation ${dataImg[index].category}`}
         width={800}
         height={800}
       />
       <Image
-        className={styles.lightboxLeft}
+        className={styles.serviceLeft}
         // Fonction Image precedente
         onClick={handlePrevious}
         src="/pictures/svg/leftLightbox.svg"
         alt="prestation precédente"
-        width={50}
-        height={50}
+        width={75}
+        height={75}
       />
       <Image
-        className={styles.lightboxRight}
+        className={styles.serviceRight}
         // Fonction Image suivante
         onClick={handleNext}
         src="/pictures/svg/rightLightbox.svg"
         alt="prestation suivante"
-        width={50}
-        height={50}
+        width={75}
+        height={75}
       />
     </div>
   );
