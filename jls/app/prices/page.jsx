@@ -47,24 +47,25 @@ export default function PricesPage() {
             <tr>
               <td>Première pose chablon</td>
               <td className={styles.alignRight}>
-                T1/T2 = 50€ <br />
-                T3/T4 = 60€
+                 55€
+              </td>
+            </tr>
+            <tr>
+              <td>Supplément ongles rongés</td>
+              <td className={styles.alignRight}>
+                 5€
               </td>
             </tr>
 
-            <tr>
-              <td>Remplissage 3 semaines</td>
-              <td className={styles.alignRight}>40€</td>
-            </tr>
 
             <tr>
-              <td>Remplissage 4 semaines</td>
-              <td className={styles.alignRight}>45€</td>
+              <td>Remplissage</td>
+              <td className={styles.alignRight}>50€</td>
             </tr>
 
             <tr>
               <td>Gainage</td>
-              <td className={styles.alignRight}>40€</td>
+              <td className={styles.alignRight}>45€</td>
             </tr>
           </tbody>
           <thead>
